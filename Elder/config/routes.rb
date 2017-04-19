@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'nav#index'
+
   get 'nav/index'
 
   get 'nav/about'
