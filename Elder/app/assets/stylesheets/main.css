@@ -1,11 +1,20 @@
 body{
+    /* persistent page background. */
     background-color: #80b2d3;
 }
 h1{
+    /* Page Title */
     color: #333333;
     text-align: center;
 }
 .porsche964_style{
+    /*this image is seen on the front page of the website. */
     height : 40%;
     width : 40%;
+}
+
+.RYE{
+    /* This will resize the header image as needed. */
+    height : 10%;
+    width : 10%;
 }
