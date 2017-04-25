@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_make: MyString
+  car_year: 2017-04-24
+  car_price: 9.99
+  car_mileage: 9.99
+
+two:
+  car_make: MyString
+  car_year: 2017-04-24
+  car_price: 9.99
+  car_mileage: 9.99
