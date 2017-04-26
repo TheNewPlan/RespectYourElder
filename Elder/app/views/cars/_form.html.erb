@@ -15,10 +15,14 @@
     <%= f.label :car_make %>
     <%= f.text_field :car_make %>
   </div>
+  <div class="field">
+    <%= f.label :car_model %>
+    <%= f.text_field :car_model %>
+  </div>
 
   <div class="field">
     <%= f.label :car_year %>
-    <%= f.date_select :car_year %>
+    <%= f.date_select :car_year, :discard_month => true, :discard_day => true, :start_year => 1916 %>
   </div>
 
   <div class="field">
