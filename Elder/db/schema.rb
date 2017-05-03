@@ -14,12 +14,13 @@ ActiveRecord::Schema.define(version: 20170425020812) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "car_make"
+    t.string   "car_model"
     t.date     "car_year"
     t.decimal  "car_price"
     t.decimal  "car_mileage"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "car_model"
+
   end
 
 end
