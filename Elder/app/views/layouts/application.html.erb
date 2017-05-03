@@ -4,10 +4,12 @@
     <title>Respect your Elders</title>
     <%= image_tag 'RYE.jpeg' %>
     <%= csrf_meta_tags %>
+    <nav>
     <%= link_to "Index", nav_index_path %>
     <%= link_to "About", nav_about_path %>
     <%= link_to "Contact", nav_contact_path %>
     <%= link_to "Cars Database", cars_path %>
+    </nav>
   </head>
 
   <body>
@@ -15,7 +17,9 @@
   </body>
 
   <footer>
+  <nav>
     <%= link_to "Privacy", nav_privacy_path %>
     <%= link_to "Help", nav_help_path %>
+  </nav>
   </footer>
 </html>
