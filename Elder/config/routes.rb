@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'nav/contact'
 
+  get 'nav/search'
+
   get 'home/index'
 
   get 'home/about'
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
   get 'home/privacy'
 
   get 'home/help'
+
+  get 'home/search'
 
   get 'nav/privacy'
 
