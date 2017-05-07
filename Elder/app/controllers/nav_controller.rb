@@ -16,13 +16,4 @@ class NavController < ApplicationController
   def privacy
   end
 
-  def search
-    @results = 0
-    if !params[:searchinput].nil?
-      @results = 1
-      @searchinput = params[:searchinput]
-      @searchcriteria="%#{params[:searchinput]}%"
-      @found = Car.where("description like ?",@searchcriteria)
-    end
-  end
 end

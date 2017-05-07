@@ -1,8 +1,8 @@
 <h1>Nav#search</h1>
 
-<p>Find me here: app/views/nav/search.html.erb</p>
+<p>Find me here: app/views/search/search.html.erb</p>
 
-<%= form_tag :action => 'search' do %>
+<%= form_tag :controller => 'nav', :action => 'nav#search', :method => 'get' do %>
     <p>What car are you looking for?:
     <%= text_field_tag 'searchinput', @searchinput %>
     </p>
@@ -37,7 +37,7 @@
       <% end %>
     <%= submit_tag 'Search' %>
     <% end %>
-
+    </p>
 
 
 
