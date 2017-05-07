@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
+  resources :promotions
+  get 'reports/list'
+
+  get 'reports/customers'
+
+  get 'reports/products'
+
+  get 'reports/classifieds'
+
   resources :cars
+
   root 'nav#index'
 
   get 'nav/index'

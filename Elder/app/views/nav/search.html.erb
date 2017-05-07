@@ -2,4 +2,47 @@
 
 <p>Find me here: app/views/nav/search.html.erb</p>
 
+<%= form_tag :action => 'search' do %>
+    <p>What car are you looking for?:
+    <%= text_field_tag 'searchinput', @searchinput %>
+    </p>
+    <br/>
+    <% if @results > 0 %>
+    <% if @dataArray.length > 0 %>
+    <p>
+      Here are your search results:
+    </p>
+    <p>
+      <table>
+        <tr>
+          <th>Car Make</th>
+          <th>Car Model</th>
+          <th>Year</th>
+          <th>Price</th>
+          <th>Mileage</th>
+        </tr>
+      <% @dataArray.each do |d| %>
+        <tr>
+          <td><%= link_to d.car_make, car_path(p.pid) %></td>
+          <td><%= d.car_model %></td>
+          <td><%= d.car_year %></td>
+          <td><%= d.car_price %></td>
+          <td><%= d.car_mileage %></td>
+        </tr>
+       <% end %>
+      </table>
+      <% else %>
+            <p>There were no cars fitting your search criteria.  Try again!</p>
+      <% end %>
+      <% end %>
+    <%= submit_tag 'Search' %>
+    <% end %>
+
+
+
+
+
+
+
+
 <%= stylesheet_link_tag "application" %>
