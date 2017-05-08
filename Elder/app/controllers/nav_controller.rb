@@ -15,5 +15,4 @@ class NavController < ApplicationController
 
   def privacy
   end
-
 end
