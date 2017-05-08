@@ -25,9 +25,9 @@
         <tr>
           <td><%= d.car_make %></td>
           <td><%= d.car_model %></td>
-          <td><%= d.car_year %></td>
-          <td><%= d.car_price %></td>
-          <td><%= d.car_mileage %></td>
+          <td><%= d.car_year.year %></td>
+          <td>(USD) <%= number_to_currency(d.car_price) %></td>
+          <td><%= number_with_delimiter(d.car_mileage, :delimiter => ',') %> miles</td>
         </tr>
        <% end %>
       </table>

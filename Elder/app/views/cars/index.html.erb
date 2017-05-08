@@ -21,9 +21,9 @@
       <tr>
         <td><%= car.car_make %></td>
         <td><%= car.car_model %></td>
-        <td><%= car.car_year %></td>
-        <td><%= car.car_price %></td>
-        <td><%= car.car_mileage %></td>
+        <td><%= car.car_year.year %></td>
+        <td>(USD) <%= number_to_currency(car.car_price) %></td>
+        <td><%= number_with_delimiter(car.car_mileage, :delimiter => ',') %> miles</td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

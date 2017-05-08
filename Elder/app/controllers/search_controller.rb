@@ -6,7 +6,7 @@ class SearchController < ApplicationController
       @results = 1
       @searchinput = params[:searchinput]
       @searchcriteria = "%"+@searchinput+"%"
-      @foundCars = Car.where("car_make | car_model like ?",@searchcriteria)
+      @foundCars = Car.where("car_make || car_model like ?",@searchcriteria)
     end
   end
 end
