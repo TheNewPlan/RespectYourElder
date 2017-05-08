@@ -1,14 +1,14 @@
-<h1>Nav#search</h1>
+<h1>Search#search</h1>
 
 <p>Find me here: app/views/search/search.html.erb</p>
 
-<%= form_tag :controller => 'nav', :action => 'nav#search', :method => 'get' do %>
-    <p>What car are you looking for?:
+<%= form_tag :action => 'search' do %>
+    <p>What car are you looking for?
     <%= text_field_tag 'searchinput', @searchinput %>
     </p>
     <br/>
     <% if @results > 0 %>
-    <% if @dataArray.length > 0 %>
+    <% if @foundCars.length > 0 %>
     <p>
       Here are your search results:
     </p>
@@ -21,9 +21,9 @@
           <th>Price</th>
           <th>Mileage</th>
         </tr>
-      <% @dataArray.each do |d| %>
+      <% @foundCars.each do |d| %>
         <tr>
-          <td><%= link_to d.car_make, car_path(p.pid) %></td>
+          <td><%= d.car_make %></td>
           <td><%= d.car_model %></td>
           <td><%= d.car_year %></td>
           <td><%= d.car_price %></td>
@@ -38,11 +38,4 @@
     <%= submit_tag 'Search' %>
     <% end %>
     </p>
-
-
-
-
-
-
-
 <%= stylesheet_link_tag "application" %>
