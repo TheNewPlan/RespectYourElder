@@ -1,12 +1,12 @@
 class Promotion < ApplicationRecord
-
   def promo
-    @active = 0
-    Promotion.all do |promo|
-    if params[:p_start] < Time.now && params[:p_end] > Time.now
-      @active = 1
-      @promoImg = promo.view_context(Time.now < p_end && p_start).image_path
+      Promotion.fine_each do |promo|
+        promo.where(:p_start => (Time.now.to_date > promo[:p_start.to_date]))
+        if promo[:p_end => (Time.now.to_date < promo[:p_end.to_date])]
+          @active = 1
+        else
+          @active = 0
+      end
     end
-  end
   end
 end
