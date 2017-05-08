@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :cars
 
   get 'nav/index'
+  post 'nav/index'
 
   get 'nav/about'
 
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   get 'nav/cars/index'
 
   get 'home/index'
+  post 'home/index'
 
   get 'home/about'
 

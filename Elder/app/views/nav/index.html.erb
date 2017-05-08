@@ -6,3 +6,11 @@
 <p>Linking this stylesheet took too long and too much time.  All you have to do is remove the //remove tree</p>
 <%= image_tag "964rs.jpg", :class => "porsche964_style" %>
 
+<% if @active != 0 %>
+  <% form_tag :controller => promotions, :action => 'promo' do %>
+  <p>
+  <%= image_tag @promoImg %>
+  </p>
+  <% end %>
+<% else %>
+<% end %>
