@@ -1,11 +1,12 @@
 class Promotion < ApplicationRecord
   def promo
-      Promotion.fine_each do |promo|
-        promo.where(:p_start => (Time.now.to_date > promo[:p_start.to_date]))
-        if promo[:p_end => (Time.now.to_date < promo[:p_end.to_date])]
-          @active = 1
-        else
-          @active = 0
+    Promotion.all.each do |promo|
+      promoStart = promo.where(:conditions => ["p_start = ?", params[:p_start]])
+      promoFinish = promo.where(:conditions => ["p_end = ?", params[:p_end]])
+      if promoStart < Time.now && promoFinish > Time.now
+        return @active = 1
+      else
+        return @active = 0
       end
     end
   end

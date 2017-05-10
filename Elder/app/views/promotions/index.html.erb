@@ -23,7 +23,7 @@
         <td><%= promotion.p_image %></td>
         <td><%= promotion.p_start %></td>
         <td><%= promotion.p_end %></td>
-        <td><% if @active != 0 %>
+        <td><% if @active == 1 %>
               Active!
               <% else %>
           Inactive
