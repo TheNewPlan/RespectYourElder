@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'secret/public'
+
+  get 'secret/private'
+
   root 'nav#index'
 
   resources :promotions
