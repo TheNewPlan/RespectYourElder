@@ -1,4 +1,4 @@
-require 'digest/sha2'
+require 'digest/md5'
 class SecretController < ApplicationController
   before_filter :authenticate, except: [:public]
   def public
