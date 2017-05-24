@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  before_action :authorize
   def list
   end
 

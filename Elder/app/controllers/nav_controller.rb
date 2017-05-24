@@ -1,4 +1,5 @@
 class NavController < ApplicationController
+  skip_before_action :authorize
   def index
     @nowTime = Time.now
     @endTime = Time.new(2017,6,12,12,00,0,"+09:00")

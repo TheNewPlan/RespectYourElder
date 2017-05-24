@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517205811) do
+ActiveRecord::Schema.define(version: 20170522230313) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "car_make"
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20170517205811) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

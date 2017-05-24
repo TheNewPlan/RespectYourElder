@@ -1,4 +1,3 @@
-require 'digest/md5'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,11 +5,6 @@ require 'digest/md5'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-REALM = "localhost"
-user1 = User.new
-user1.username = "mhallo"
-user1.password = Digest::MD5.hexdigest(["mhallo",REALM,"password"]).join(":")
-user1.save
 
 Car.create(car_make: 'Porsche', car_model: '356 Speedster', car_year: Date.new(1956,1,01), car_price: 100000, car_mileage: 13000)
 Car.create(car_make: 'Porsche', car_model: 'Carrera GT', car_year: Date.new(2005,1,01), car_price: 1500000, car_mileage: 5700.2 )
