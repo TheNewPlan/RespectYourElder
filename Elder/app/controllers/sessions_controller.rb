@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize
+
   def new
   end
 
@@ -6,9 +8,9 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user.try(:authenticate, params[:password])
       session[:user_id] = user.id
-      redirect_to admin_url
+      redirect_to admin_path
     else
-      redirect_to login_url, alert: "Invalid user/password combination"
+      redirect_to login_path, alert: "Invalid user/password combination"
       end
   end
 

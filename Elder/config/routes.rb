@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'admin' => 'admin/index'
+  get 'admin' => 'admin#index'
 
   controller :sessions do
+    get 'register' => 'users#new', :as => 'register'
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
