@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  get 'users/new'
+  controller :sessions do
+    get 'register' => 'users#new'
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :users
   get 'secret/public'
 
   get 'secret/private'

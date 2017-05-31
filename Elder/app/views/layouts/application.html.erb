@@ -11,6 +11,9 @@
     <%= link_to "Cars Database", cars_path %>
     <%= link_to "Search", search_search_path %>
     <%= link_to "Reports", reports_list_path %>
+    <%= link_to "Register", users_new_path %>
+    <%= link_to "Log In", sessions_new_path, method: "login" %>
+    <%= link_to "Log Out", sessions_destroy_path, method: "logout" %>
     </nav>
   </head>
 
@@ -23,6 +26,7 @@
     <%= link_to "Privacy", nav_privacy_path %>
     <%= link_to "Help", nav_help_path %>
     <%= link_to "Promotions", promotions_path %>
+
   </nav>
   </footer>
 </html>

@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize
 
   # GET /cars
   # GET /cars.json
